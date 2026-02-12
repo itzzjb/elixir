@@ -6,13 +6,17 @@ defmodule Example do
   @doc """
   Hello world.
 
-  ## Examples
-
-      iex> Example.hello()
-      :world
-
-  """
+  
+  # need to compile before running the code via `mix compile` 
+  # function that prints a value 
+  # is both visible via `iex -S mix` -> `Example.hello`  + `mix run -e "Example.hello"`
   def hello do
-    :world
+    IO.puts(:world)
   end
+  
+  ## visible via `iex -S mix` -> `Example.hello` but not visible via `mix run -e "Example.hello"`
+  # function that returns a value 
+  def helloworld do 
+    :helloworld
+  end 
 end
