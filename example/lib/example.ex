@@ -20,3 +20,8 @@ defmodule Example do
     :helloworld
   end 
 end
+
+# These functioned called here are only being ran in the compile time 
+# So only when running `mix compile` or `mix run` for the fisttime they will be executed (when there are no changes it doesn't need to compile again) 
+Example.hello
+Example.helloworld
